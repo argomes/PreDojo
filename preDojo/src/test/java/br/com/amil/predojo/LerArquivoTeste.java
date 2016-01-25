@@ -11,10 +11,10 @@ import org.junit.Test;
 @SuppressWarnings("deprecation")
 public class LerArquivoTeste {
 	BufferedReader br;
-	
+	String url = "C:\\Projetos\\Estudos\\ProvaAmil\\preDojo\\log.log";
 	@Test
 	public void lerArquivoTest(){
-		String url = "C:\\Projetos\\Estudos\\ProvaAmil\\preDojo\\log.log";
+		
 		FileRead_ arq = new FileRead_();
 		this.br = arq.getLerArquivo(url);
 		try {
@@ -27,7 +27,6 @@ public class LerArquivoTeste {
 	
 	@Test
 	public void armazenaPartidaTest(){
-		String url = "C:\\Projetos\\Estudos\\ProvaAmil\\preDojo\\log.log";
 		FileRead_ arq = new FileRead_();
 		this.br = arq.getLerArquivo(url);
 		List<Rank> rabkGeral = arq.armazenaPartida(br);
